@@ -32,5 +32,5 @@
 
 - name: Import FiLebeat
   ansible.builtin.import_role:
-    name: elk
+    name: ek
     tasks_from: filebeat
