@@ -2,7 +2,7 @@ groups:
   - name: ec2-nodes
     rules:
       - alert: HighCPUUtilisation
-        expr: 100-(avg by (component, env, instance, job, name) (rate(node_cpu_seconds_total{mode="idle"}[1m])*100)) > 20
+        expr: 100-(avg by (component, env, instance, job, name) (rate(node_cpu_seconds_total{mode="idle"}[1m])*100)) > 60
         for: 1m
         labels:
           severity: page
